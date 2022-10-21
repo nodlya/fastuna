@@ -1,0 +1,28 @@
+/*.mainpicture{
+    background-color: #15A4D0;
+}*/
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url(./Proxima\ Nova/proximanova_black.ttf);
+}
+
+body{
+    background-color: #15A4D0;
+}
+
+p{
+    font-family: 'ProximaNova';
+}
+
+a{
+    text-decoration: none;
+}
+
+.headercontainer{
+    color:white;
+}
+
+.headercontainer--yellow{
+    color:yellow;
+}
