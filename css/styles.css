@@ -1,0 +1,325 @@
+@font-face {
+    font-family: 'ProximaNova';
+    src: url(/Proxima\ Nova/proximanova_regular.ttf);
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url(./Proxima\ Nova/proximanova_bold.ttf);
+}
+
+body{
+    background-color: #15A4D0;
+}
+
+p{
+    font-family: 'ProximaNova'; 
+    color:white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+    gap: 10px;
+    /*это влияет на расположение только изображения
+    absolute обозначает смещение относительно расположения контейнера
+    по умолчанию static, то есть все контейнеры находятся друг за другом без изменения расположения
+    почему тогда absolute делает всё красивее, а положение изображения мы не прописывали*/
+    position: absolute;
+    height: 100px;
+    /*почему это влияет на выравнивание по центру по горизонтали???
+      если не написать, то блок растягивается на всю ширину*/
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+
+.header__container{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 56px;
+}
+
+.header__container--white{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    order: 1;
+}
+
+/*можно ли использовать в коде !important?
+  не понимаю, почему цвет не жёлтый у элементов, раньше работало
+*/
+.header__container--yellow{
+    color:yellow !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    order: 2;
+}
+
+/*а вот так цвет поменялся*/
+.header__container--yellow p{
+    color:yellow;
+}
+
+
+/*насколько оправданно использовать id, если мы его как и классы выше используем только один раз?
+  вообще насколько хорошей практикой считается использование id?*/
+#logo{
+    width: 213.5px;
+    height: 38.82px;
+    order: 0;
+}
+
+.claim{
+    /*почему мы использвуем в основном absolute?*/
+    position: absolute;
+    height: 750px;
+    /*зачем нам писать нули? какое значение по умолчанию?*/
+    left: 0px;
+    right: 0px;
+    top: 100px;
+}
+
+#main-picture{
+    position: absolute;
+    width: 797px;
+    height: 577px;
+    /*как обрезать картинку, чтобы не появлялась прокрутка вбок?*/
+    left: calc(50% - 797px/2 + 340px);
+    top: calc(50% - 577px/2 - 75px);
+}
+
+#innovation{
+    position: absolute;
+    width: 665px;
+    height: 184px;
+    left: calc(50% - 665px/2 - 244px);
+    top: calc(50% - 184px/2 - 250px);
+    font-weight: 800;
+    font-size: 94px;
+    line-height: 92px;
+    /* or 98% */
+    
+    letter-spacing: 0em;
+    font-weight: 1000;
+}
+
+#subinnovation{
+    position: absolute;
+    width: 533px;
+    height: 145px;
+    left: calc(50% - 533px/2 - 310px);
+    top: calc(50% - 145px/2);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: -0.01em;
+}
+
+#single-button{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 20px;
+
+    position: absolute;
+    width: 263px;
+    height: 60px;
+    left: calc(50% - 263px/2 - 445px);
+    top: calc(50% - 60px/2 + 180px);
+
+    background: #FFCE00;
+    border: #FFCE00;
+    border-radius: 56px;
+}
+
+#button__text{
+    font-weight: 1000;
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.advantages{
+    position: absolute;
+    height: 781px;
+    left: 0px;
+    right: 0px;
+    top: 850px;
+}
+
+.advantages__first{
+    position: absolute;
+    height: 390px;
+    width: 50%;
+    left: 0%;
+    right: 50%;
+    top: 0px;
+
+    background: #FFCE00;
+}
+
+.advantages__second{
+    position: absolute;
+    height: 390px;
+    width: 50%;
+    left: 50%;
+    right: 0%;
+    top: 0px;
+
+    background: #021014;
+}
+
+.advantages__third{
+    box-sizing: border-box;
+
+    position: absolute;
+    height: 390px;
+    width: 50%;
+    left: 0%;
+    right: 50%;
+    top: 391px;
+}
+
+.advantages__forth{
+    position: absolute;
+    height: 390px;
+    width: 50%;
+    left: 50%;
+    right: 0%;
+    top: 391px;
+
+    background: #FFFFFF;
+}
+
+
+.advantages__title{
+    position: absolute;
+    width: 500px;
+    left: 20px;
+    top: 20px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+}
+
+.advantages__title--blue{
+    color: #15A4D0;
+}
+
+.advantages__title--yellow
+{
+    color: #FFCE00;
+}
+
+.advantages__description{
+    position: absolute;
+    width: 415px;
+    height: 108px;
+    left: 20px;
+    top: 130px;
+
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.advantages__description--black{
+    color: #000000;
+}
+
+#advantages__third__description{
+    top:166px;
+}
+
+.advantages__read-more{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 107px;
+    height: 20px;
+    left: 20px;
+    bottom: 16px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.advantages__read-more--black{
+    color: #000000;
+}
+
+/*как сохранять изображения так, чтобы они все были одного размера хотя бы тт*/
+
+#bulb{
+    position: absolute;
+    width: 800px;
+    height: 430px;
+    right: -27.43px;
+    top: calc(50% - 245.92px/2 + 12);
+
+    transform: rotate(0.5deg);
+}
+
+#rocket{
+    position: absolute;
+    width: 746px;
+    height: 400px;
+    right: 0px;
+    top: calc(50% - 245.92px/2 - 50px);
+}
+
+#brochure{
+    position: absolute;
+    left: 350px;
+    top: 38px;
+    height: 90%;
+}
+
+#kite{
+    position: absolute;
+    left: 5%;
+    top: 13%;
+    bottom: auto;
+    height: 85%;
+    transform: rotate(-1.18deg);
+}
+
