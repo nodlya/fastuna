@@ -7,17 +7,14 @@ body{
     background-color: #15A4D0;
 }
 
-p{
+p, a{
     font-family: 'ProximaNova'; 
-    color:white;
-}
-
-a{
+    color:white; 
     text-decoration: none;
-    color: inherit;
 }
 
-header{
+
+.header{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +33,6 @@ header{
     top: 0px;
 }
 
-
 .header__container{
     font-weight: 700;
     font-size: 16px;
@@ -51,7 +47,7 @@ header{
     gap: 56px;
 }
 
-.header__container--white{
+.header__container--navigation{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -59,11 +55,9 @@ header{
     order: 1;
 }
 
-/*можно ли использовать в коде !important?
-  не понимаю, почему цвет не жёлтый у элементов, раньше работало
+/*не понимаю, почему цвет не жёлтый у элементов, раньше работало
 */
-.header__container--yellow{
-    color:yellow !important;
+.header__container--auth{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,14 +65,10 @@ header{
     order: 2;
 }
 
-/*а вот так цвет поменялся*/
-.header__container--yellow p{
-    color:yellow;
+.header__container--auth--yellow{
+    color:#FFCE00;
 }
 
-
-/*насколько оправданно использовать id, если мы его как и классы выше используем только один раз?
-  вообще насколько хорошей практикой считается использование id?*/
 #logo{
     width: 213.5px;
     height: 38.82px;
@@ -86,10 +76,8 @@ header{
 }
 
 .claim{
-    /*почему мы использвуем в основном absolute?*/
     position: absolute;
     height: 750px;
-    /*зачем нам писать нули? какое значение по умолчанию?*/
     left: 0px;
     right: 0px;
     top: 100px;
@@ -99,7 +87,6 @@ header{
     position: absolute;
     width: 797px;
     height: 577px;
-    /*как обрезать картинку, чтобы не появлялась прокрутка вбок?*/
     left: calc(50% - 797px/2 + 340px);
     top: calc(50% - 577px/2 - 75px);
 }
@@ -149,11 +136,8 @@ header{
     background: #FFCE00;
     border: #FFCE00;
     border-radius: 56px;
-}
-
-#button__text{
-    font-weight: 1000;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 20px;
 
     text-align: center;
@@ -282,39 +266,49 @@ header{
     color: #000000;
 }
 
-/*как сохранять изображения так, чтобы они все были одного размера хотя бы тт*/
-
 #bulb{
     position: absolute;
-    width: 800px;
-    height: 430px;
+    width: 761px;
+    height: 345.92px;
     right: -27.43px;
-    top: calc(50% - 245.92px/2 + 12);
+    top: calc(45% - 245.92px/2);
 
-    transform: rotate(0.5deg);
+    transform: rotate(2.86deg);
 }
 
 #rocket{
     position: absolute;
-    width: 746px;
-    height: 400px;
-    right: 0px;
-    top: calc(50% - 245.92px/2 - 50px);
+    width: 740px;
+    height: 300px;
+    top: calc(50% - 296px/2 + 22px);
 }
 
 #brochure{
     position: absolute;
-    left: 350px;
-    top: 38px;
-    height: 90%;
+    right: 0px;
+    bottom: 0px;
+}
+
+#ellipse{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }
 
 #kite{
     position: absolute;
-    left: 5%;
-    top: 13%;
-    bottom: auto;
-    height: 85%;
+    right: 50px;
+    bottom: 6px;
     transform: rotate(-1.18deg);
 }
+
+/* Вопросы
+1. Почему position чаще всего используется именно absolute? Это для флексбоксов актуально?
+2. Можно ли использовать !important в коде?
+3. Если мы обращаемся к классу только один раз, то лучше использовать именно класс, потому что наследование, или id потому что единственное использование?
+4. Почему свойство color к тексту в nav не применяется?
+5. Как в css записывать классы и id? По порядку html или сначала классы, а потом id?
+6. Как можно обрезать картинку через css вместо
+7. Куда писать @media? После класса, который нужно изменить?
+*/
 

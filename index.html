@@ -10,32 +10,27 @@
     </head>
 
     <body>
-        <header>
+        <header class="header">
             <div class="header__container">
                 <img src="./source/icon_smaller.png" alt="icon" id="logo">
-                <nav class="header__container--white">
-                    <p><a href="#">solutions</a></p>
-                    <p><a href="#">how it works</a></p>
-                    <p><a href="#">case studies</a></p>
-                    <p><a href="#">blog</a></p>
+                <nav class="header__container--navigation">
+                    <a href="#">solutions</a>
+                    <a href="#">how it works</a>
+                    <a href="#">case studies</a>
+                    <a href="#">blog</a>
                 </nav>
-                <nav class="header__container--yellow">
-                    <p><a href="#">log in</a></p>
-                    <p><a href="#">create account</a></p>
+                <nav class="header__container--auth">
+                    <a href="#" class="header__container--auth--yellow">log in</a>
+                    <a href="#" class="header__container--auth--yellow">create account</a>
                 </nav>
             </div>
         </header>
 
-        <!--как правильно именовать этот класс, если это не контейнер для конкретных тегов?-->
         <div class="claim">
-            <img src="./source/main_picture.png" id="main-picture">
+            <img src="./source/main-picture.png" id="main-picture">
             <p id="innovation">Innovate with confidence</p>
             <p id="subinnovation">Validate product and marketing decisions with real people using our hassle-free testing tool</p>
-            
-            <!--в чём разница между value кнопки и текстом между тегами?
-                в чём разница между button и input?
-            -->
-            <button value="Book a free call" id="single-button"><p id="button__text">Book a free call</p></button>
+            <button id="single-button">Book a free call</button>
         </div>
 
         <div class="advantages">
@@ -52,13 +47,14 @@
                 <p class="advantages__read-more"><a href="#">Read more</a></p>
             </div>
             <div class="advantages__third">
+                <img src="./source/ellipse.png" id="ellipse">
                 <img src="./source/brochure.png" id="brochure">
                 <p class="advantages__title advantages__title--yellow">Become a happier and more valuable researcher with automation</p>
                 <p class="advantages__description" id="advantages__third__description">Make the most of it with us</p>
                 <p class="advantages__read-more"><a href="#">Read more</a></p>
             </div>
             <div class="advantages__forth">
-                <img src="./source/kite2.png" id="kite">
+                <img src="./source/kite.png" id="kite">
                 <p class="advantages__title advantages__title--blue">Release yourself from routine research work</p>
                 <p class="advantages__description advantages__description--black">Researchers, product managers and marketers achieve KPIs easily and increase confidence </p>
                 <p class="advantages__read-more advantages__read-more--black"><a href="#">Read more</a></p>
